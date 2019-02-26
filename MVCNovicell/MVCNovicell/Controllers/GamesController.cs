@@ -19,15 +19,33 @@ namespace MVCNovicell.Controllers
         }
 
         // GET: Games
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string gameGenre, string searchString)
         {
+            //Use LINQ to get list og genres.
+            //Gets all the genre items from the database.
+            IQueryable<string> genreQuery = from g in _context.Game
+                                            orderby g.Genre
+                                            select g.Genre;
             var games = from g in _context.Game
                         select g;
+
             if (!String.IsNullOrEmpty(searchString))
                 {
                 games = games.Where(s => s.Title.Contains(searchString));
                 }
-            return View(await games.ToListAsync());
+
+            if (!String.IsNullOrEmpty(gameGenre))
+            {
+                games = games.Where(x => x.Genre == gameGenre);
+            }
+
+            var gameGenreVM = new GameGenreViewModel
+            {
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Games = await games.ToListAsync()
+            };
+
+            return View(gameGenreVM);
         }
 
         // GET: Controller / action / id || Games/Details/5
@@ -59,7 +77,7 @@ namespace MVCNovicell.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Score")] Game game)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Score,UserScore")] Game game)
         {
             if (ModelState.IsValid)
             {
@@ -68,6 +86,13 @@ namespace MVCNovicell.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(game);
+        }
+
+        //Makes the search query appear in the address bar combined with a get method in the games view index file form section
+        [HttpPost]
+        public string Index(string searchString, bool notUsed)
+        {
+            return "From [HttpPost]Index: filter on " + searchString;
         }
 
         // GET: Games/Edit/5
@@ -91,7 +116,7 @@ namespace MVCNovicell.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Score")] Game game)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Score,UserScore")] Game game)
         {
             if (id != game.Id)
             {
