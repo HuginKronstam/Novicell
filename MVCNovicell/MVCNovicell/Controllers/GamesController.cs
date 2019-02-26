@@ -19,9 +19,15 @@ namespace MVCNovicell.Controllers
         }
 
         // GET: Games
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Game.ToListAsync());
+            var games = from g in _context.Game
+                        select g;
+            if (!String.IsNullOrEmpty(searchString))
+                {
+                games = games.Where(s => s.Title.Contains(searchString));
+                }
+            return View(await games.ToListAsync());
         }
 
         // GET: Controller / action / id || Games/Details/5
