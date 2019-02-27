@@ -48,7 +48,7 @@ namespace MVCNovicell.Controllers
             return View(gameGenreVM);
         }
 
-        // GET: Controller / action / id || Games/Details/5
+        // GET: Games/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
