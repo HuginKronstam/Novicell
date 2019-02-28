@@ -58,7 +58,6 @@
                 </td>
                 <td>
                     <img src="~/Content/@Html.DisplayFor(modelItem =>item.ImgUrl)" style="height:200px;width:200px;" />
-                    @*<img src="@Html.DisplayFor(modelItem => item.ImgUrl)">*@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
@@ -70,4 +69,3 @@
         }
     </tbody>
 </table>
-<p><img src="/Content/dota2.jpg"/></p>

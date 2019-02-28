@@ -14,7 +14,15 @@
 
 
   <ItemGroup>
-    <Folder Include="Content\images\" />
+    <Folder Include="wwwroot\Content\images\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\dota2.jpg" />
+    <None Include="wwwroot\Content\minecraft.png" />
+    <None Include="wwwroot\Content\pathOfExile.png" />
+    <None Include="wwwroot\Content\superMarioBros3.jpg" />
   </ItemGroup>
 
 </Project>
