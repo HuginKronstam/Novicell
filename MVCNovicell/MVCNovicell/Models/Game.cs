@@ -26,8 +26,7 @@ namespace MVCNovicell.Models
         [Required]
         public decimal Score { get; set; }
 
-        [Column(TypeName = "decimal(18, 2)"), StringLength(5)]
-        public decimal UserScore { get; set; }
-        // public string imgURL { get; set; }
+        [RegularExpression(@"^[\w\d\s\.\\\*]*$"), StringLength(20)]
+        public String ImgUrl { get; set; }
     }
 }

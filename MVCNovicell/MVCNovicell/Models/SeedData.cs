@@ -26,7 +26,7 @@ namespace MVCNovicell.Models
                         ReleaseDate = DateTime.Parse("2013-07-13"),
                         Genre = "Moba",
                         Score = 9,
-                        UserScore = 0
+                        ImgUrl = "dota2.jpg"
                     },
 
                     new Game
@@ -35,7 +35,7 @@ namespace MVCNovicell.Models
                         ReleaseDate = DateTime.Parse("2009-05-17"),
                         Genre = "Sandbox",
                         Score = 7,
-                        UserScore = 0
+                        ImgUrl = "minecraft.png"
                     },
 
                     new Game
@@ -44,7 +44,7 @@ namespace MVCNovicell.Models
                         ReleaseDate = DateTime.Parse("2013-10-23"),
                         Genre = "Hack N' Slash",
                         Score = 8,
-                        UserScore = 0
+                        ImgUrl = "pathOfExile.png"
                     },
 
                     new Game
@@ -53,7 +53,7 @@ namespace MVCNovicell.Models
                         ReleaseDate = DateTime.Parse("1988-10-23"),
                         Genre = "Platformer",
                         Score = 10,
-                        UserScore = 0
+                        ImgUrl = "superMarioBros3.jpg"
                     }
                 );
                 context.SaveChanges();
