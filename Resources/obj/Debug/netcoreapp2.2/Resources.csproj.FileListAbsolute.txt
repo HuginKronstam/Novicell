@@ -1,0 +1,14 @@
+D:\Coding\Novicell\MVCNovicell\Resources\bin\Debug\netcoreapp2.2\Resources.deps.json
+D:\Coding\Novicell\MVCNovicell\Resources\bin\Debug\netcoreapp2.2\Resources.dll
+D:\Coding\Novicell\MVCNovicell\Resources\bin\Debug\netcoreapp2.2\Resources.pdb
+D:\Coding\Novicell\MVCNovicell\Resources\bin\Debug\netcoreapp2.2\da\Resources.resources.dll
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.language.resources
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.language.da.resources
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.csproj.GenerateResource.cache
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.csproj.CoreCompileInputs.cache
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.AssemblyInfoInputs.cache
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.AssemblyInfo.cs
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\da\Resources.resources.dll
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.dll
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.pdb
+D:\Coding\Novicell\MVCNovicell\Resources\obj\Debug\netcoreapp2.2\Resources.csprojAssemblyReference.cache
